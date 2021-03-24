@@ -1,0 +1,16 @@
+from clientes import Cliente
+from contas import Conta
+from contas import ContaEspecial
+
+joão = Cliente("João da Silva", "777-1234")
+maria = Cliente("Maria da Silva", "555-4321")
+
+conta1 = Conta([joão], 1, 1000)
+conta1.saque(500)
+conta1.extrato()
+
+
+conta2 = ContaEspecial([maria, joão], 2, 200, 500)
+conta2.saque(250)
+conta2.deposito(300)
+conta2.extrato()
